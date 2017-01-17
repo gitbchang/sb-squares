@@ -17,8 +17,10 @@ $(document).ready(function(){
 var name;
 var profile;
 var email;
-$(".g-signin2").on("click", onSignIn);
+$(".g-signin2").trigger();
+
 function onSignIn(googleUser) {
+
        profile = googleUser.getBasicProfile();
        name = profile.getName();
        //console.log('Image URL: ' + profile.getImageUrl());
