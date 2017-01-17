@@ -28,6 +28,8 @@ function onSignIn(googleUser) {
        //initiiate();
        $('.g-signin2').hide();
        console.log("You have Signed In");
+       console.log(name);
+       console.log(email);
 
    }
    function signOut() {
