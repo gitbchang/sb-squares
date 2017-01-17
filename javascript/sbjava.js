@@ -44,14 +44,7 @@ $(document).ready(function() {
             var credential = error.credential;
             // ...
         });
-
-
-
         //  $('.g-signin2').hide();
-
-
-
-
     }
 
     // console.log(profile);
@@ -65,12 +58,20 @@ $(document).ready(function() {
         });
         name = null;
         email = null;
-        $('#content').hide();
         $('.g-signin2').show();
         window.location = "index.html";
     }
 
     $(".signout").on("click", signOut);
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            console.log
+        } else {
+            // No user is signed in.
+        }
+    });
 
 
 
