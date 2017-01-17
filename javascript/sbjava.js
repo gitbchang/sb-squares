@@ -17,7 +17,7 @@ $(document).ready(function(){
 var name;
 var profile;
 var email;
-$(".g-signin2").trigger();
+// $(".g-signin2").trigger();
 
 function onSignIn(googleUser) {
 
