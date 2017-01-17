@@ -26,6 +26,7 @@ $(document).ready(function() {
         //console.log('Image URL: ' + profile.getImageUrl());
         email = profile.getEmail();
 
+/*
         firebase.auth().signInWithPopup(provider).then(function(result) {
             // This gives you a Google Access Token. You can use it to access the Google API.
             var token = result.credential.accessToken;
@@ -43,11 +44,12 @@ $(document).ready(function() {
             var credential = error.credential;
             // ...
         });
-
+*/
 
 
         //  $('.g-signin2').hide();
         console.log("You have Signed In");
+        console.log(profile);
         console.log(name);
         console.log(email);
 
