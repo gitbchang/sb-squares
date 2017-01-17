@@ -17,6 +17,7 @@ $(document).ready(function(){
 var name;
 var profile;
 var email;
+$(".g-signin2").on("click", onSignIn);
 function onSignIn(googleUser) {
        profile = googleUser.getBasicProfile();
        name = profile.getName();
