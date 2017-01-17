@@ -65,6 +65,8 @@ $(document).ready(function() {
         window.location = "index.html";
     }
 
+    $(".signout").on("click", signout);
+
 
 
 
