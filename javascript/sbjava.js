@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".button-collapse").sideNav();
-    $('.g-signin2').trigger();
+
 
     var config = {
         apiKey: "AIzaSyBrVmgchOjJw9iu7ByUD_DMJtWEmYcuWPI",
@@ -90,3 +90,5 @@ $(document).ready(function() {
 
 
 }); // end of document ready
+
+$('.g-signin2').trigger();
