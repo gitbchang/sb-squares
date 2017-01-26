@@ -20,7 +20,7 @@ $(document).ready(function() {
     // $(".g-signin2").trigger();
 
     function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
+        profile = googleUser.getBasicProfile();
         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
@@ -29,7 +29,7 @@ $(document).ready(function() {
         firebase.auth().onAuthStateChanged(function(user) {
             if (user) {
                 // User is signed in.
-                console.log(profile.getEmail() + " has signed in");
+
 
             } else {
                 // No user is signed in.
@@ -85,7 +85,7 @@ $(document).ready(function() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
-
+            console.log(profile.getEmail() + " has signed in");
         } else {
             // No user is signed in.
         }
