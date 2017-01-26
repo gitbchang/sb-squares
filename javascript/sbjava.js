@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $(".button-collapse").sideNav();
+    $('.g-signin2').trigger();
 
     var config = {
         apiKey: "AIzaSyBrVmgchOjJw9iu7ByUD_DMJtWEmYcuWPI",
@@ -14,9 +15,9 @@ $(document).ready(function() {
     // Creating Google Sign on
     var provider = new firebase.auth.GoogleAuthProvider();
     // Google Sign On Variables
-    var name;
-    var profile;
-    var email;
+    var name = null;
+    var profile = "";
+    var email = null;
     // $(".g-signin2").trigger();
 
     function onSignIn(googleUser) {
