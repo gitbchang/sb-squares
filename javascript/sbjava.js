@@ -25,6 +25,16 @@ $(document).ready(function() {
         console.log('Name: ' + profile.getName());
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+                console.log(profile.getEmail() + " has signed in");
+
+            } else {
+                // No user is signed in.
+            }
+        });
     }
 /*
     function onSignIn(googleUser) {
