@@ -1,6 +1,8 @@
 $(document).ready(function() {
+    // navigation bar collapse on minimize window
     $(".button-collapse").sideNav();
-
+    // sign out of google acount
+    $(".signout").on("click", signOut);
 
     var config = {
         apiKey: "AIzaSyBrVmgchOjJw9iu7ByUD_DMJtWEmYcuWPI",
@@ -28,38 +30,7 @@ $(document).ready(function() {
 
         $('.g-signin2').hide();
     }
-/*
-    function onSignIn(googleUser) {
-        console.log("You have Signed In");
-        // profile = googleUser.getBasicProfile();
-        // name = profile.getName();
-        //console.log('Image URL: ' + profile.getImageUrl());
-        // email = profile.getEmail();
 
-
-        firebase.auth().signInWithPopup(provider).then(function(result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            var token = result.credential.accessToken;
-            // The signed-in user info.
-            var user = result.user;
-            console.log("User Info: " + user);
-            // ...
-        }).catch(function(error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // The email of the user's account used.
-            var email = error.email;
-            // The firebase.auth.AuthCredential type that was used.
-            var credential = error.credential;
-            // ...
-        });
-        //  $('.g-signin2').hide();
-    }
-*/
-    // console.log(profile);
-    // console.log(name);
-    // console.log(email);
 
     function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
@@ -72,9 +43,9 @@ $(document).ready(function() {
         window.location = "index.html";
     }
 
-    $(".signout").on("click", signOut);
 
-    firebase.auth().onAuthStateChanged(function(user) {
+
+    database.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
             console.log(profile.getEmail() + " has signed in");
