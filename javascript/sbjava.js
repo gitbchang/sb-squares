@@ -12,12 +12,11 @@ $(document).ready(function() {
     firebase.initializeApp(config);
     var database = firebase.database();
 
-    // Creating Google Sign on
-    var provider = new firebase.auth.GoogleAuthProvider();
+
     // Google Sign On Variables
-    var name = null;
+    var name;
     var profile = "";
-    var email = null;
+    var email;
     // $(".g-signin2").trigger();
 
     function onSignIn(googleUser) {
