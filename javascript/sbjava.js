@@ -20,6 +20,14 @@ $(document).ready(function() {
     // $(".g-signin2").trigger();
 
     function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+        console.log('Name: ' + profile.getName());
+        console.log('Image URL: ' + profile.getImageUrl());
+        console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+    }
+/*
+    function onSignIn(googleUser) {
         console.log("You have Signed In");
         // profile = googleUser.getBasicProfile();
         // name = profile.getName();
@@ -46,7 +54,7 @@ $(document).ready(function() {
         });
         //  $('.g-signin2').hide();
     }
-
+*/
     // console.log(profile);
     // console.log(name);
     // console.log(email);
@@ -67,7 +75,7 @@ $(document).ready(function() {
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
             // User is signed in.
-            console.log
+
         } else {
             // No user is signed in.
         }
