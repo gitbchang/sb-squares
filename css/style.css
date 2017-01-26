@@ -1,0 +1,11 @@
+
+.square {
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: red 2px solid;
+}
+
+.playArea > .row {
+  margin-bottom: 0px;
+}
