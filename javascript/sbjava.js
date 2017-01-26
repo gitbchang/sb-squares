@@ -15,7 +15,7 @@ $(document).ready(function() {
 
     // Google Sign On Variables
     var name;
-    var profile = "";
+    var profile;
     var email;
     // $(".g-signin2").trigger();
 
@@ -26,15 +26,7 @@ $(document).ready(function() {
         console.log('Image URL: ' + profile.getImageUrl());
         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                // User is signed in.
-
-
-            } else {
-                // No user is signed in.
-            }
-        });
+        $('.g-signin2').hide();
     }
 /*
     function onSignIn(googleUser) {
