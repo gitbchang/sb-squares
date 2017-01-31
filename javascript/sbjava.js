@@ -71,8 +71,10 @@ $(document).ready(function() {
     firebase.initializeApp(config);
     var database = firebase.database();
     var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('profile');
+    provider.addScope("email");
 
-    /*
+
     firebase.auth().signInWithPopup(provider).then(function(result) {
         // This gives you a Google Access Token. You can use it to access the Google API.
         var token = result.credential.accessToken;
@@ -91,7 +93,7 @@ $(document).ready(function() {
         var credential = error.credential;
         // ...
     });
-*/
+
     function gSignIn(){
       firebase.auth().signInWithRedirect(provider).then(function(result){
         // This gives you a Google Access Token. You can use it to access the Google API.
