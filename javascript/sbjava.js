@@ -159,7 +159,8 @@ $(document).ready(function() {
         $('.g-signin2').hide();
 
   }
-  /*
+
+  */
 
     function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
@@ -182,7 +183,7 @@ $(document).ready(function() {
             // No user is signed in.
         }
     });
-*/
+
 
 
 
